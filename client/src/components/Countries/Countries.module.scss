@@ -1,0 +1,30 @@
+@use "../../sassVariables/variables.scss" as *;
+
+.container{
+    // background-color: aqua;
+    width: 100%;
+    height: $height-country-car *2 + 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    .message{
+        color: #040404;
+        font-size: $size-mesage;
+        font-weight: $weight-base;
+    }
+    .countries{
+        background-color: $background-base;
+        width: 90%;
+        border-radius: 20px;
+        position: relative;
+        padding-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        // img{
+            
+        // }
+        // backdrop-filter: blur(4px);
+    }
+}

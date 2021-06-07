@@ -1,0 +1,97 @@
+$color-button : #337076;
+$size-country-base : 18px;
+$size-text-input: 17px !default;
+$text-shadow-base: 0 1px 0 rgba(19,74,70,.4);
+$text-color-button : #f4f4f4;
+$width-country-car : 230px;
+$height-country-car : 160px;
+$size-base : 20px;
+$size-base-select : 15px;
+$base-text-color: #f4f4f4;
+$weight-base : 500;
+$base-text-color-select: #2724249d;
+$background-select: rgba($color: #34555d, $alpha: 1);
+$background-alter: rgba($color: #34555d, $alpha: 0.8);
+$background-base : rgba($color: #34555d, $alpha: 0.5);
+$background-country: rgba($color: #34555d, $alpha: 0.95);
+$weight-select : 600;
+$size-base-filter : 18px;
+$base-text-color-pages: #34555d;
+$color-button-enable: #9b9b9b;
+$color-button-hover: #e4e4e4;
+$border: 3px solid $base-text-color-pages;
+$size-mesage: 30px;
+$hover-color : #c4d4e9;
+$margin-top: 5rem;
+$box-shadow-base : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+$box-shadow-button: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+$padding-base: 8px 10px !default;
+
+@mixin element-label-focus {
+    color: #377D6A;
+    text-indent: 0;
+    background: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &::-webkit-input-placeholder {
+        color: #aaa;
+    }
+    + label {
+        transform: translateX(-100%);
+    }
+}
+
+@mixin element-label{
+    font-size: $size-text-input;
+    display: inline-block;
+    width: 215px;
+    padding: 5px 0 10px 5px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: #377D6A;
+    background: #c7d8f1;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 80px; // Arbitrary.
+    transition: all .3s ease-in-out;
+    
+    &::-webkit-input-placeholder {
+        color: rgba(19,74,70,0);
+        text-indent: 0;
+        font-weight: 300;
+    }
+    
+    + label {
+        color: #f4f4f4;
+        // font-size: 17px;
+        font-weight: 500;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        padding: $padding-base;
+        text-shadow: 0 1px 0 rgba(19,74,70,.4);
+        background: $color-button;
+        transition: all .3s ease-in-out;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+}
+
+@mixin button{
+    margin: 0 5px;
+    background-color: $color-button;
+    text-shadow: $text-shadow-base;
+    font-size: $size-base;
+    color: $text-color-button;
+    // box-shadow: $box-shadow-button;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    padding: 0 3px;
+    &:hover{
+        box-shadow: $box-shadow-button;
+    }
+}

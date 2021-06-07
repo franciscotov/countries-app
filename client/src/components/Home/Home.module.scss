@@ -1,0 +1,23 @@
+@use "../../sassVariables/variables.scss" as *;
+
+.home{
+    width: 60%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        color: #307076;
+        font-size: 100px;
+    }
+    .icon{
+        font-size: 100px;
+        margin-left: 20px;
+        padding-bottom: -10px;
+        // background-color: firebrick;
+        color: #307076;
+    }
+    a{
+        text-decoration: none;
+    }
+}

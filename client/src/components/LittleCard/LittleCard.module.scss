@@ -1,0 +1,17 @@
+.littleCard{
+    background-color: lightgreen;
+    width: 100px;
+    height: 40px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 5px;
+    .close{
+        font-size: medium;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 3px #b4b4b4;
+        }
+    }
+}

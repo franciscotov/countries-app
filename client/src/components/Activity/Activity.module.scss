@@ -1,0 +1,29 @@
+@use "../../sassVariables/variables.scss" as *; 
+ 
+ .container{
+    margin: 0 5px;
+    background-color: $background-alter;
+    font-size: $size-base - 1px; 
+    color: $text-color-button;
+    border-radius: 7px;
+    padding: 0 3px;
+    .activity{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    span{
+        font-size: 15px;
+    }
+ }
+
+//  .submit, .activity{
+//     background-color: $color-button;
+//     font-size: $size-base;
+//     color: $text-color-button;
+//     height: 30px;
+//     border-radius: 7px;
+//     border: none;
+//     cursor: pointer;
+// }

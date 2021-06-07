@@ -1,0 +1,22 @@
+name: Build and Deploy to heroku
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - api/**
+      - .github/workflows/prueba.yml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./api 
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "app-countries-v-2" #Must be unique in Heroku
+          heroku_email: "frank.ronaldo_17@hotmail.com"
+          appdir: "api"

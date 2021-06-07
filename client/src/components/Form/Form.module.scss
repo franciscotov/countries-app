@@ -1,0 +1,61 @@
+@use "../../sassVariables/variables.scss" as * with(
+    // $size-text-input: 15px,
+    $padding-base: 7px 10px
+    );
+
+.container{ 
+    background-color: $background-alter;
+    width: 50%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 23px 23px 0;
+    // margin-left: 40px;
+    // backdrop-filter: blur(4px);
+    span {
+        position: relative;
+        display: inline-block;
+        margin: 10px 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .activity{
+        // background-color: salmon;
+        color: $base-text-color;
+        border-radius: 7px;
+        padding: 3px;
+        font-size: 20px;
+        margin-left: 50px;
+        margin-top: 7px;
+    }
+    .input{
+        @include element-label;
+        margin-right: 25px;
+    }
+    .input:focus, .input:active{
+        @include element-label-focus;
+    }
+    form{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .submit, .activity{
+        background-color: $color-button;
+        font-size: $size-base;
+        color: $text-color-button;
+        height: 30px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            box-shadow: $box-shadow-button;
+        }
+    }
+    .submit{
+        margin-left: -20px;
+    }
+}

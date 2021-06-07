@@ -1,0 +1,52 @@
+@use "../../sassVariables/variables.scss"  as * with(
+    $size-text-input: 15px,
+    $padding-base: 6.7px 10px
+    );
+
+
+.filters{
+    background-color: $background-alter;
+    border-radius: 23px 0 0 23px;
+    // height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 110px;
+    width: 50%;
+    margin-left: auto;
+    .principal, .secondary{
+        // background-color: violet;
+        display: flex;
+        justify-content: center;
+        font-size: $size-text-input;
+        font-weight: $weight-base;
+        color: $base-text-color;
+        span {
+            position: relative;
+            display: inline-block;
+            margin: 10px 10px;
+        }
+    }
+    .by{
+        background-color: $background-select;
+        height: 20px;
+    }
+    .order{
+        font-size: 16px;
+    }
+    select{
+        @include element-label;
+        // margin-left: 20px;
+        margin-right: 25px;
+    }
+    select:focus, select:active{
+        @include element-label-focus;
+    }
+    option{
+        border-color: transparent;
+        font-weight: $weight-base;
+    }
+}
+.disable{
+    visibility: hidden;
+}

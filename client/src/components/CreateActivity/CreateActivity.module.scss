@@ -1,0 +1,119 @@
+@use "../../sassVariables/variables.scss" as *;
+
+// * {
+//     box-sizing: border-box;
+//   }
+.container{
+    background-color: $background-alter;
+    border-radius: 25px;
+    width: 750px;
+    padding: 15px 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    a{
+        text-decoration: none; 
+    }
+    
+    .countries{
+        display: flex;
+        // max-width: 100px;
+    }
+    .selectCountries{
+        max-width: 400px;
+        // color: red;
+    }
+    .title{
+        font-size: 40px;
+        font-weight: 600;
+        color: $base-text-color;
+    }
+    .back, .submit{
+        @include button;
+    }
+    select{
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: $background-select;
+        color: $base-text-color-select;
+        border-radius: 5px;
+        box-sizing: content-box;
+        border-color: transparent;
+        font-size: $size-base-select;
+        font-weight: $weight-select;
+    }
+    .form{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+    @mixin epic-sides() {
+        position: relative;
+        z-index: 1;
+    
+        &:before {
+            position: absolute;
+            display: block;
+            top: 0;
+            height: 100px;
+            width: fit-content;
+            z-index: -1;
+            @content;
+            content: "";
+        }
+    }
+    .row {
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px 30px;
+        border-radius: 15px;
+        //   background: #032429;
+        background-color: $background-alter; 
+        @include epic-sides() {background: inherit;}
+        text-align: center;
+        
+        span {
+            position: relative;
+            display: inline-block;
+            margin: 10px 10px;
+        }
+    }
+    .input, select {
+        @include element-label;
+        + label {
+            font-size: 15px;
+        }
+    }
+    .input:focus, select:focus,
+    .input:active, select:active {
+        @include element-label-focus;
+    }
+    // .submit{
+    //     background-color: $color-button;
+    //     font-size: $size-base;
+    //     color: $text-color-button;
+    //     height: 30px;
+    //     border-radius: 7px;
+    //     border: none;
+    //     margin-top: 20px;
+    //     cursor: pointer;
+    // }
+}
+
+.addCountry{
+    cursor: pointer;
+    width: 60px;
+    align-self: center;
+    border: 5px;
+    background-color: lightcoral;
+}

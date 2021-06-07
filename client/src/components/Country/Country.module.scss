@@ -1,0 +1,64 @@
+@use "../../sassVariables/variables.scss" as *;
+
+.country{
+    // background-color: salmon;
+    box-shadow: $box-shadow-base;
+    position: relative;
+    width: $width-country-car;
+    height: $height-country-car;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    border-radius: 15px;
+    .img, .data, img {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+    .img{
+        position: absolute;
+        z-index: 1;
+    }
+    .data{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        z-index: 2;
+        // background-color: rgba($color: #f4f4f4, $alpha: 1.0);
+        &:hover{
+            // visibility: visible;
+            background-color: $background-country;
+            opacity: 1;
+        }
+        span{
+            color: $base-text-color;
+            font-size: $size-country-base;
+            font-weight: 600;
+        }
+        a{
+            text-decoration: none;
+        }
+        .buttonDetails{
+            background-color: $color-button;
+            font-size: $size-country-base;
+            font-weight: 500;
+            color: $text-color-button;
+            margin-top: 5px;
+            padding: 0 3px;
+            height: 30px;
+            border-radius: 7px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &:hover{
+                // box-shadow: $box-shadow-base;
+                box-shadow: $box-shadow-button;
+            }
+        }
+    }
+}

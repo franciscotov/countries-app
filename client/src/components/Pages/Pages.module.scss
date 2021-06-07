@@ -1,0 +1,61 @@
+@use "../../sassVariables/variables.scss" as *;
+
+.pages{
+    // background-color: lightcoral;
+    display: flex;
+    width: 60%;
+    height: 25px;
+    // border-radius: 5px;
+    .page{
+        // background-color: lightgreen;
+        width: 2.5rem;
+        // border: 2px solid #d3d3d3;
+        box-shadow: 1px 1px #d3d3d3;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .arrowRight, .arrowLeft{
+        cursor: pointer;
+        // background-color: aqua;
+        border: $border;
+        border-radius: 14px;
+        font-size: 40px;
+        width: 40px;
+        height: 200px;
+        position: absolute;
+        margin-top: $margin-top;
+        padding-top: 100px;
+        &:hover{
+            background-color: $hover-color;
+        }
+    }
+    .arrowRight, .arrowRightDisable{
+        margin-left: 82rem;
+    }
+    .arrowLeft, .arrowLeftDisable{
+        margin-left: 0.5rem;
+    }
+    .icon{
+        color: $base-text-color-pages;
+    }
+    .arrowLeftDisable, .arrowRightDisable{
+        cursor: pointer;
+        // background-color: aqua;
+        border: 3px solid $base-text-color-pages;
+        border-radius: 14px;
+        font-size: 40px;
+        width: 40px;
+        height: 200px;
+        position: absolute;
+        margin-top: $margin-top;
+        padding-top: 100px;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+    
+    
+    .text{
+        color: $base-text-color-pages;
+    }
+}

@@ -1,0 +1,34 @@
+@use "../../sassVariables/variables.scss" as *;
+
+.container{
+    background-color: #627673;
+    // opacity: 0;
+    color: $base-text-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $size-base;
+    font-weight: bold;
+    .left{
+        margin-left: 40px;
+    }
+    .right{
+        margin-right: 40px;
+    }
+    .icon{
+        color: $base-text-color;
+        width: 35px;
+        // background-color: lightgreen;
+        height: 35px;
+        margin-left: 20px;
+        border-radius: 10px;
+        &:hover{
+            box-shadow: $box-shadow-button;
+        }
+    }
+}
