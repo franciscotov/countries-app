@@ -17,7 +17,7 @@
     "react-icons": "^4.2.0",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^5.0.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sass": "^1.32.8",
@@ -25,10 +25,10 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
     "install:personal": "npm_config_userconfig=./.npmrc npm install"
   },
   "eslintConfig": {
@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0"
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
+    "@craco/craco": "^7.1.0"
   }
 }
